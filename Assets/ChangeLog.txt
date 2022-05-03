@@ -1,0 +1,14 @@
+﻿			1.0.2
+
+			1.0.1
+* Added different mesh types for blocks: Cube, BufferBody, BufferBody_Long, FlatQuad and OriginCube
+* Changed peg colors to better reflect in game peg colors (black).
+* Added startOn property for output pegs. Turning this on will turn the selected output peg red.
+* Added support to edit primaryGridPositions, secondaryGridPositions, primaryEdgePositions, and secondaryEdgePositions in placingRules.
+* Added the ability to duplicate the selected object, with the button on the bottom panel or Ctrl + D.
+* Added ability to rotate multiple selected objects at once.
+* The camera will no longer move from WASD inputs when Ctrl is being held.
+* Added clientCode property.
+
+			1.0
+* Initial Release

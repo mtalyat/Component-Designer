@@ -1,0 +1,12 @@
+﻿				Current Update:
+placingRules: Standard, StandardFlippable, PegLike, MountLike
+blocks -> colliderData:
+			type: Box, None
+			transform:
+				position (Vector3)
+				scale (Vector3)
+componentData: clientCode: string
+
+				Next Update:
+inputs -> bottomless: true/false
+blocks -> mesh: BetterCube_OpenBottom
