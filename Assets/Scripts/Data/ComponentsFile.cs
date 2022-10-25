@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SUCC;
 using System.IO;
+using System.Linq;
 
 public class ComponentsFile
 {
@@ -115,5 +116,13 @@ public class ComponentsFile
         DataFile file = new DataFile(filePath);
 
         file.SaveAsDictionary(components);
+
+        // after saving, remove all lines that end in null
+        File.WriteAllLines(filePath, File.ReadAllLines(filePath).Where(s =>
+        {
+            string t = s.TrimEnd();
+
+            return !t.EndsWith("null") && !t.EndsWith("\"null\"");
+        }));
     }
 }

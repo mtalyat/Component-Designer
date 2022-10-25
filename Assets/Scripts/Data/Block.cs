@@ -27,6 +27,7 @@ public class Block : BlockData
     [SaveThis]
     public string mesh { get; set; } = "";
 
+    [DontSaveThis]
     [EditableProperty]
     public MeshType meshType { get; set; } = MeshType.Cube;
 
@@ -38,7 +39,7 @@ public class Block : BlockData
     {
         base.Load();
 
-        if(string.IsNullOrEmpty(mesh))
+        if(string.IsNullOrEmpty(mesh) || mesh.CompareTo("null") == 0)
         {
             meshType = MeshType.Cube;
         } else
@@ -53,7 +54,7 @@ public class Block : BlockData
 
         if (meshType == MeshType.Cube)
         {
-            mesh = null;
+            mesh = "null";
         }
         else
         {
